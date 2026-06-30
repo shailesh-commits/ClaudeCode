@@ -6,7 +6,7 @@ A spec-driven, **.NET 8 Clean Architecture** reference project: a production-gra
 
 This repo contains two things side by side:
 
-1. **The spec-driven workflow artifacts** (`ShaileshApi/`) — the original scaffold project plus the documents that drove its build: an organizational guidance file defining a 7-persona development process, a product brief, and a full technical specification.
+1. **The spec-driven workflow artifacts** (`OnlineCatalogApi/`) — the original scaffold project plus the documents that drove its build: an organizational guidance file defining a 7-persona development process, a product brief, and a full technical specification.
 2. **The generated solution** (`src/`, `tests/`) — the actual Clean Architecture .NET 8 API produced by following that spec: `OnlineCatalog.Api`, `OnlineCatalog.Application`, `OnlineCatalog.Domain`, `OnlineCatalog.Infrastructure`, and a unit test project.
 
 ## The Online Catalog API
@@ -130,7 +130,7 @@ dotnet test OnlineCatalog.slnx
 
 `tests/OnlineCatalog.UnitTests` covers representative handlers across the Catalog, Categories, and Users features using Moq and FluentAssertions.
 
-## The Spec-Driven Workflow (`ShaileshApi/`)
+## The Spec-Driven Workflow (`OnlineCatalogApi/`)
 
 This folder documents how the `src/OnlineCatalog.*` solution was actually produced, and is useful as a template for similar Claude Code–driven builds:
 
