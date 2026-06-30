@@ -1,0 +1,331 @@
+Using launch settings from src\OnlineCatalog.Api\Properties\launchSettings.json...
+Building...
+D:\Shailesh\Training\Claude\dotnet-api\src\OnlineCatalog.Application\OnlineCatalog.Application.csproj : warning NU1903: Package 'AutoMapper' 13.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x [D:\Shailesh\Training\Claude\dotnet-api\src\OnlineCatalog.Api\OnlineCatalog.Api.csproj]
+D:\Shailesh\Training\Claude\dotnet-api\src\OnlineCatalog.Infrastructure\OnlineCatalog.Infrastructure.csproj : warning NU1903: Package 'AutoMapper' 13.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x [D:\Shailesh\Training\Claude\dotnet-api\src\OnlineCatalog.Api\OnlineCatalog.Api.csproj]
+d:\Shailesh\Training\Claude\dotnet-api\src\OnlineCatalog.Application\OnlineCatalog.Application.csproj : warning NU1903: Package 'AutoMapper' 13.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x [D:\Shailesh\Training\Claude\dotnet-api\src\OnlineCatalog.Application\OnlineCatalog.Application.csproj]
+D:\Shailesh\Training\Claude\dotnet-api\src\OnlineCatalog.Infrastructure\OnlineCatalog.Infrastructure.csproj : warning NU1903: Package 'AutoMapper' 13.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x
+[17:51:48 INF] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+[17:51:48 INF] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+[17:51:48 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+[17:51:48 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+[17:51:48 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[17:51:48 INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[17:51:48 INF] Now listening on: http://localhost:5045
+[17:51:48 INF] Application started. Press Ctrl+C to shut down.
+[17:51:48 INF] Hosting environment: Development
+[17:51:48 INF] Content root path: D:\Shailesh\Training\Claude\dotnet-api\src\OnlineCatalog.Api
+[17:52:05 INF] Request starting HTTP/1.1 GET http://localhost:5045/ - null null
+[17:52:06 WRN] Failed to determine the https port for redirect.
+[17:52:06 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:06 INF] Request finished HTTP/1.1 GET http://localhost:5045/ - 404 0 null 158.1162ms
+[17:52:06 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5045/, Response status code: 404
+[17:52:09 INF] Request starting HTTP/1.1 GET http://localhost:5045/health - null null
+[17:52:09 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:09 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.HealthController.Get (OnlineCatalog.Api)'
+[17:52:09 INF] Route matched with {action = "Get", controller = "Health"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.HealthController (OnlineCatalog.Api).
+[17:52:09 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+[17:52:09 INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[17:52:09 INF] Executed action OnlineCatalog.Api.Controllers.HealthController.Get (OnlineCatalog.Api) in 50.0699ms
+[17:52:09 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.HealthController.Get (OnlineCatalog.Api)'
+[17:52:09 INF] Request finished HTTP/1.1 GET http://localhost:5045/health - 200 null application/json; charset=utf-8 96.2717ms
+[17:52:15 INF] Request starting HTTP/1.1 POST http://localhost:5045/api/v1/users - application/json 96
+[17:52:15 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:15 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:15 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.UsersController.Create (OnlineCatalog.Api)'
+[17:52:15 INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(OnlineCatalog.Application.Features.Users.Commands.CreateUserCommand, System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.UsersController (OnlineCatalog.Api).
+[17:52:15 INF] Executed DbCommand (70ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+[17:52:16 INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 255), @p3='?' (Size = 100), @p4='?' (Size = 512), @p5='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [Email], [Name], [PasswordHash], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+[17:52:16 INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (Size = 512), @p4='?' (Size = 100), @p5='?' (DbType = DateTimeOffset), @p6='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ApiKeys] ([Id], [CreatedAt], [ExpiresAt], [KeyHash], [Label], [RevokedAt], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+[17:52:16 INF] Executing CreatedAtActionResult, writing value of type 'OnlineCatalog.Application.DTOs.CreateUserResponse'.
+[17:52:16 INF] Executed action OnlineCatalog.Api.Controllers.UsersController.Create (OnlineCatalog.Api) in 807.0737ms
+[17:52:16 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.UsersController.Create (OnlineCatalog.Api)'
+[17:52:16 INF] Request finished HTTP/1.1 POST http://localhost:5045/api/v1/users - 201 null application/json; charset=utf-8 820.9599ms
+[17:52:25 INF] Request starting HTTP/1.1 GET http://localhost:5045/health - null null
+[17:52:25 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:25 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.HealthController.Get (OnlineCatalog.Api)'
+[17:52:25 INF] Route matched with {action = "Get", controller = "Health"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.HealthController (OnlineCatalog.Api).
+[17:52:25 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+[17:52:25 INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTimeOffset, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[17:52:25 INF] Executed action OnlineCatalog.Api.Controllers.HealthController.Get (OnlineCatalog.Api) in 26.9597ms
+[17:52:25 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.HealthController.Get (OnlineCatalog.Api)'
+[17:52:25 INF] Request finished HTTP/1.1 GET http://localhost:5045/health - 200 null application/json; charset=utf-8 30.8607ms
+[17:52:25 INF] Request starting HTTP/1.1 GET http://localhost:5045/favicon.ico - null null
+[17:52:25 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:25 INF] Request finished HTTP/1.1 GET http://localhost:5045/favicon.ico - 404 0 null 2.738ms
+[17:52:25 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5045/favicon.ico, Response status code: 404
+[17:52:32 INF] Request starting HTTP/1.1 GET http://localhost:5045/users - null null
+[17:52:32 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:32 INF] Request finished HTTP/1.1 GET http://localhost:5045/users - 404 0 null 1.7012ms
+[17:52:32 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5045/users, Response status code: 404
+[17:52:37 INF] Request starting HTTP/1.1 GET http://localhost:5045/user - null null
+[17:52:37 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:37 INF] Request finished HTTP/1.1 GET http://localhost:5045/user - 404 0 null 1.3769ms
+[17:52:37 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5045/user, Response status code: 404
+[17:52:40 INF] Request starting HTTP/1.1 POST http://localhost:5045/api/v1/categories - application/json 22
+[17:52:41 INF] Executed DbCommand (4ms) [Parameters=[@__keyHash_0='?' (Size = 512)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreatedAt], [a].[ExpiresAt], [a].[KeyHash], [a].[Label], [a].[RevokedAt], [a].[UserId]
+FROM [ApiKeys] AS [a]
+WHERE [a].[KeyHash] = @__keyHash_0
+[17:52:41 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:52:41 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:52:41 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.CategoriesController.Create (OnlineCatalog.Api)'
+[17:52:41 INF] Route matched with {action = "Create", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(OnlineCatalog.Application.Features.Categories.Commands.CreateCategoryCommand, System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.CategoriesController (OnlineCatalog.Api).
+[17:52:41 INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]
+        WHERE [c].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+[17:52:41 INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 500), @p3='?' (Size = 100), @p4='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([Id], [CreatedAt], [Description], [Name], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+[17:52:41 INF] Executing CreatedAtActionResult, writing value of type 'OnlineCatalog.Application.DTOs.CategoryDto'.
+[17:52:41 INF] Executed action OnlineCatalog.Api.Controllers.CategoriesController.Create (OnlineCatalog.Api) in 99.568ms
+[17:52:41 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.CategoriesController.Create (OnlineCatalog.Api)'
+[17:52:41 INF] Request finished HTTP/1.1 POST http://localhost:5045/api/v1/categories - 201 null application/json; charset=utf-8 146.8901ms
+[17:52:41 INF] Request starting HTTP/1.1 GET http://localhost:5045/api/v1/categories - null null
+[17:52:41 INF] Executed DbCommand (1ms) [Parameters=[@__keyHash_0='?' (Size = 512)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreatedAt], [a].[ExpiresAt], [a].[KeyHash], [a].[Label], [a].[RevokedAt], [a].[UserId]
+FROM [ApiKeys] AS [a]
+WHERE [a].[KeyHash] = @__keyHash_0
+[17:52:41 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:52:41 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:52:41 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.CategoriesController.GetAll (OnlineCatalog.Api)'
+[17:52:41 INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.CategoriesController (OnlineCatalog.Api).
+[17:52:41 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[Description], [c].[Name], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+ORDER BY [c].[Name]
+[17:52:41 INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[OnlineCatalog.Application.DTOs.CategoryDto, OnlineCatalog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[17:52:41 INF] Executed action OnlineCatalog.Api.Controllers.CategoriesController.GetAll (OnlineCatalog.Api) in 20.7541ms
+[17:52:41 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.CategoriesController.GetAll (OnlineCatalog.Api)'
+[17:52:41 INF] Request finished HTTP/1.1 GET http://localhost:5045/api/v1/categories - 200 null application/json; charset=utf-8 30.9695ms
+[17:52:58 INF] Request starting HTTP/1.1 GET http://localhost:5045/wishlist - null null
+[17:52:58 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:52:58 INF] Request finished HTTP/1.1 GET http://localhost:5045/wishlist - 404 0 null 1.4832ms
+[17:52:58 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5045/wishlist, Response status code: 404
+[17:53:03 INF] Request starting HTTP/1.1 POST http://localhost:5045/api/v1/catalog - application/json 195
+[17:53:03 INF] Executed DbCommand (1ms) [Parameters=[@__keyHash_0='?' (Size = 512)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreatedAt], [a].[ExpiresAt], [a].[KeyHash], [a].[Label], [a].[RevokedAt], [a].[UserId]
+FROM [ApiKeys] AS [a]
+WHERE [a].[KeyHash] = @__keyHash_0
+[17:53:03 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:53:03 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:53:03 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.CatalogController.Create (OnlineCatalog.Api)'
+[17:53:03 INF] Route matched with {action = "Create", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(OnlineCatalog.Application.Features.Catalog.Commands.CreateCatalogItemCommand, System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.CatalogController (OnlineCatalog.Api).
+[17:53:03 INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[Description], [c].[Name], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__id_0
+[17:53:03 INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTimeOffset), @p3='?' (Size = 1000), @p4='?' (Size = 2048), @p5='?' (Size = 200), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = DateTimeOffset)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CatalogItems] ([Id], [CategoryId], [CreatedAt], [Description], [ImageUrl], [Name], [Price], [UpdatedAt])
+OUTPUT INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+[17:53:03 INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CategoryId], [c].[CreatedAt], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[Price], [c].[UpdatedAt], [c0].[Id], [c0].[CreatedAt], [c0].[Description], [c0].[Name], [c0].[UpdatedAt]
+FROM [CatalogItems] AS [c]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+WHERE [c].[Id] = @__id_0
+[17:53:03 INF] Executing CreatedAtActionResult, writing value of type 'OnlineCatalog.Application.DTOs.CatalogItemDto'.
+[17:53:03 INF] Executed action OnlineCatalog.Api.Controllers.CatalogController.Create (OnlineCatalog.Api) in 125.573ms
+[17:53:03 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.CatalogController.Create (OnlineCatalog.Api)'
+[17:53:03 INF] Request finished HTTP/1.1 POST http://localhost:5045/api/v1/catalog - 201 null application/json; charset=utf-8 133.3219ms
+[17:53:03 INF] Request starting HTTP/1.1 GET http://localhost:5045/api/v1/catalog?page=1&pageSize=10 - null null
+[17:53:03 INF] Executed DbCommand (1ms) [Parameters=[@__keyHash_0='?' (Size = 512)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreatedAt], [a].[ExpiresAt], [a].[KeyHash], [a].[Label], [a].[RevokedAt], [a].[UserId]
+FROM [ApiKeys] AS [a]
+WHERE [a].[KeyHash] = @__keyHash_0
+[17:53:03 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:53:03 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:53:03 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.CatalogController.GetAll (OnlineCatalog.Api)'
+[17:53:03 INF] Route matched with {action = "GetAll", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Nullable`1[System.Guid], System.String, Int32, Int32, System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.CatalogController (OnlineCatalog.Api).
+[17:53:03 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [CatalogItems] AS [c]
+[17:53:03 INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[CategoryId], [t].[CreatedAt], [t].[Description], [t].[ImageUrl], [t].[IsActive], [t].[Name], [t].[Price], [t].[UpdatedAt], [c0].[Id], [c0].[CreatedAt], [c0].[Description], [c0].[Name], [c0].[UpdatedAt]
+FROM (
+    SELECT [c].[Id], [c].[CategoryId], [c].[CreatedAt], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[Price], [c].[UpdatedAt]
+    FROM [CatalogItems] AS [c]
+    ORDER BY [c].[Name]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Categories] AS [c0] ON [t].[CategoryId] = [c0].[Id]
+ORDER BY [t].[Name]
+[17:53:03 INF] Executing OkObjectResult, writing value of type 'OnlineCatalog.Application.DTOs.PagedResult`1[[OnlineCatalog.Application.DTOs.CatalogItemDto, OnlineCatalog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[17:53:03 INF] Executed action OnlineCatalog.Api.Controllers.CatalogController.GetAll (OnlineCatalog.Api) in 49.0234ms
+[17:53:03 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.CatalogController.GetAll (OnlineCatalog.Api)'
+[17:53:03 INF] Request finished HTTP/1.1 GET http://localhost:5045/api/v1/catalog?page=1&pageSize=10 - 200 null application/json; charset=utf-8 59.645ms
+[17:53:15 INF] Request starting HTTP/1.1 POST http://localhost:5045/api/v1/wishlist - application/json 66
+[17:53:15 INF] Executed DbCommand (1ms) [Parameters=[@__keyHash_0='?' (Size = 512)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreatedAt], [a].[ExpiresAt], [a].[KeyHash], [a].[Label], [a].[RevokedAt], [a].[UserId]
+FROM [ApiKeys] AS [a]
+WHERE [a].[KeyHash] = @__keyHash_0
+[17:53:15 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:53:15 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:53:15 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.WishlistController.AddItem (OnlineCatalog.Api)'
+[17:53:15 INF] Route matched with {action = "AddItem", controller = "Wishlist"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddItem(OnlineCatalog.Application.Features.Wishlist.Commands.AddWishlistItemCommand, System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.WishlistController (OnlineCatalog.Api).
+[17:53:15 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CategoryId], [c].[CreatedAt], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[Price], [c].[UpdatedAt], [c0].[Id], [c0].[CreatedAt], [c0].[Description], [c0].[Name], [c0].[UpdatedAt]
+FROM [CatalogItems] AS [c]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+WHERE [c].[Id] = @__id_0
+[17:53:15 INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid), @__catalogItemId_1='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[AddedAt], [w].[CatalogItemId], [w].[UserId]
+FROM [WishlistItems] AS [w]
+WHERE [w].[UserId] = @__userId_0 AND [w].[CatalogItemId] = @__catalogItemId_1
+[17:53:15 INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [WishlistItems] ([Id], [AddedAt], [CatalogItemId], [UserId])
+VALUES (@p0, @p1, @p2, @p3);
+[17:53:15 INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[AddedAt], [w].[CatalogItemId], [w].[UserId], [c].[Id], [c].[CategoryId], [c].[CreatedAt], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[Price], [c].[UpdatedAt], [c0].[Id], [c0].[CreatedAt], [c0].[Description], [c0].[Name], [c0].[UpdatedAt]
+FROM [WishlistItems] AS [w]
+INNER JOIN [CatalogItems] AS [c] ON [w].[CatalogItemId] = [c].[Id]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+WHERE [w].[Id] = @__id_0
+[17:53:15 INF] Executing ObjectResult, writing value of type 'OnlineCatalog.Application.DTOs.WishlistItemDto'.
+[17:53:15 INF] Executed action OnlineCatalog.Api.Controllers.WishlistController.AddItem (OnlineCatalog.Api) in 48.5811ms
+[17:53:15 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.WishlistController.AddItem (OnlineCatalog.Api)'
+[17:53:15 INF] Request finished HTTP/1.1 POST http://localhost:5045/api/v1/wishlist - 201 null application/json; charset=utf-8 56.4071ms
+[17:53:16 INF] Request starting HTTP/1.1 GET http://localhost:5045/api/v1/wishlist - null null
+[17:53:16 INF] Executed DbCommand (0ms) [Parameters=[@__keyHash_0='?' (Size = 512)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreatedAt], [a].[ExpiresAt], [a].[KeyHash], [a].[Label], [a].[RevokedAt], [a].[UserId]
+FROM [ApiKeys] AS [a]
+WHERE [a].[KeyHash] = @__keyHash_0
+[17:53:16 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:53:16 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:53:16 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.WishlistController.GetWishlist (OnlineCatalog.Api)'
+[17:53:16 INF] Route matched with {action = "GetWishlist", controller = "Wishlist"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetWishlist(System.Nullable`1[System.Guid], System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.WishlistController (OnlineCatalog.Api).
+[17:53:16 INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT [w].[Id], [w].[AddedAt], [w].[CatalogItemId], [w].[UserId], [c].[Id], [c].[CategoryId], [c].[CreatedAt], [c].[Description], [c].[ImageUrl], [c].[IsActive], [c].[Name], [c].[Price], [c].[UpdatedAt], [c0].[Id], [c0].[CreatedAt], [c0].[Description], [c0].[Name], [c0].[UpdatedAt]
+FROM [WishlistItems] AS [w]
+INNER JOIN [CatalogItems] AS [c] ON [w].[CatalogItemId] = [c].[Id]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+WHERE [w].[UserId] = @__userId_0
+ORDER BY [w].[AddedAt]
+[17:53:16 INF] Executing OkObjectResult, writing value of type 'OnlineCatalog.Application.DTOs.WishlistDto'.
+[17:53:16 INF] Executed action OnlineCatalog.Api.Controllers.WishlistController.GetWishlist (OnlineCatalog.Api) in 23.1916ms
+[17:53:16 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.WishlistController.GetWishlist (OnlineCatalog.Api)'
+[17:53:16 INF] Request finished HTTP/1.1 GET http://localhost:5045/api/v1/wishlist - 200 null application/json; charset=utf-8 29.8798ms
+[17:53:22 INF] Request starting HTTP/1.1 GET http://localhost:5045/api/vi/wishlist - null null
+[17:53:22 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:53:22 INF] Executing endpoint '400 Invalid API Version'
+[17:53:22 INF] Request contained the API version 'i', which is not valid
+[17:53:22 INF] Executed endpoint '400 Invalid API Version'
+[17:53:22 INF] Request finished HTTP/1.1 GET http://localhost:5045/api/vi/wishlist - 400 0 null 4.5443ms
+[17:53:29 INF] Request starting HTTP/1.1 GET http://localhost:5045/api/v1/wishlist - null null
+[17:53:29 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:53:29 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:53:29 INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[17:53:29 INF] AuthenticationScheme: ApiKey was challenged.
+[17:53:29 INF] Request finished HTTP/1.1 GET http://localhost:5045/api/v1/wishlist - 401 0 null 4.8951ms
+[17:53:32 INF] Request starting HTTP/1.1 GET http://localhost:5045/api/v1/wishlists - null null
+[17:53:32 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:53:32 INF] Request finished HTTP/1.1 GET http://localhost:5045/api/v1/wishlists - 404 0 null 1.2619ms
+[17:53:32 INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5045/api/v1/wishlists, Response status code: 404
+[17:53:42 INF] Request starting HTTP/1.1 GET http://localhost:5045/api/v1/users - null null
+[17:53:42 INF] ApiKey was not authenticated. Failure message: Missing X-Api-Key header.
+[17:53:42 INF] Executing endpoint '405 HTTP Method Not Supported'
+[17:53:42 INF] Executed endpoint '405 HTTP Method Not Supported'
+[17:53:42 INF] Request finished HTTP/1.1 GET http://localhost:5045/api/v1/users - 405 0 null 2.2655ms
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger - null null
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger - 301 0 null 1.1147ms
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/index.html - null null
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/index.html - 200 null text/html;charset=utf-8 58.3829ms
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui.css - null null
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/index.css - null null
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui-bundle.js - null null
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui-standalone-preset.js - null null
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/index.js - null null
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/index.js - 200 null application/javascript;charset=utf-8 1.3851ms
+[17:54:00 INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/index.css - 200 202 text/css 6.5122ms
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/index.js - null null
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/index.js - 200 null application/javascript;charset=utf-8 1.0183ms
+[17:54:00 INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui.css - 200 152034 text/css 22.6723ms
+[17:54:00 INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 13.897ms
+[17:54:00 INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 28.0757ms
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui-standalone-preset.js - null null
+[17:54:00 INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 2.8792ms
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui-bundle.js - null null
+[17:54:00 INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 5.0455ms
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/v1/swagger.json - null null
+[17:54:00 INF] Request starting HTTP/1.1 GET http://localhost:5045/swagger/favicon-32x32.png - null null
+[17:54:00 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[17:54:00 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/favicon-32x32.png - 200 628 image/png 1.2423ms
+[17:54:01 INF] Request finished HTTP/1.1 GET http://localhost:5045/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 241.382ms
+[17:55:54 INF] Request starting HTTP/1.1 POST http://localhost:5045/api/v1/categories - text/json 54
+[17:55:54 INF] Executed DbCommand (2ms) [Parameters=[@__keyHash_0='?' (Size = 512)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreatedAt], [a].[ExpiresAt], [a].[KeyHash], [a].[Label], [a].[RevokedAt], [a].[UserId]
+FROM [ApiKeys] AS [a]
+WHERE [a].[KeyHash] = @__keyHash_0
+[17:55:54 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:55:54 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:55:54 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.CategoriesController.Create (OnlineCatalog.Api)'
+[17:55:54 INF] Route matched with {action = "Create", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(OnlineCatalog.Application.Features.Categories.Commands.CreateCategoryCommand, System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.CategoriesController (OnlineCatalog.Api).
+[17:55:54 INF] Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]
+        WHERE [c].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+[17:55:54 INF] Executed action OnlineCatalog.Api.Controllers.CategoriesController.Create (OnlineCatalog.Api) in 7.1433ms
+[17:55:54 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.CategoriesController.Create (OnlineCatalog.Api)'
+[17:55:54 INF] Request finished HTTP/1.1 POST http://localhost:5045/api/v1/categories - 409 null application/json 32.8527ms
+[17:56:32 INF] Request starting HTTP/1.1 GET http://localhost:5045/api/v1/categories - null null
+[17:56:32 INF] Executed DbCommand (1ms) [Parameters=[@__keyHash_0='?' (Size = 512)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreatedAt], [a].[ExpiresAt], [a].[KeyHash], [a].[Label], [a].[RevokedAt], [a].[UserId]
+FROM [ApiKeys] AS [a]
+WHERE [a].[KeyHash] = @__keyHash_0
+[17:56:32 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:56:32 DBG] AuthenticationScheme: ApiKey was successfully authenticated.
+[17:56:32 INF] Executing endpoint 'OnlineCatalog.Api.Controllers.CategoriesController.GetAll (OnlineCatalog.Api)'
+[17:56:32 INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller OnlineCatalog.Api.Controllers.CategoriesController (OnlineCatalog.Api).
+[17:56:32 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[Description], [c].[Name], [c].[UpdatedAt]
+FROM [Categories] AS [c]
+ORDER BY [c].[Name]
+[17:56:32 INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[OnlineCatalog.Application.DTOs.CategoryDto, OnlineCatalog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[17:56:32 INF] Executed action OnlineCatalog.Api.Controllers.CategoriesController.GetAll (OnlineCatalog.Api) in 5.1627ms
+[17:56:32 INF] Executed endpoint 'OnlineCatalog.Api.Controllers.CategoriesController.GetAll (OnlineCatalog.Api)'
+[17:56:32 INF] Request finished HTTP/1.1 GET http://localhost:5045/api/v1/categories - 200 null application/json; charset=utf-8 11.4006ms
